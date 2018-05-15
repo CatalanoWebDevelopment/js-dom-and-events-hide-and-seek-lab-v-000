@@ -7,7 +7,15 @@ function nestedTarget() {
 }
 
 function deepestChild() {
+    let id = document.getElementById('grand-node')
+    let child = id.children[0]
     
+    while(child) {
+        id = child
+        child = id.children[0]
+    }
+    
+    return id
 }
 
 function increaseRankBy(n) {
